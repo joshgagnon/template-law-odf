@@ -37,6 +37,7 @@ EXTENSIONS = {
 }
 
 
+
 def convert_type(data, type):
     env_path = tempfile.mkdtemp()
     try:
@@ -77,19 +78,23 @@ class InvalidUsage(Exception):
         return rv
 
 
-@app.route('/render')
+@app.route('/render', methods=['POST'])
 def render():
     try:
+        print 'rendering'
         data = request.get_json(force=True)
+        values = data['values']
+        print values
         with open('templates/' + os.path.basename(data['formName']) + '.odt') as template:
-            result = engine.render(template, **data)
-            filename = os.path.basename(data.get('fileName', data['formName']))
-            if data['fileType'] != 'odt':
-                result = convert_type(result, data['fileType'])
+
+            result = engine.render(template, **values)
+            filename = os.path.basename(values.get('fileName', data['formName']))
+            if values['fileType'] != 'odt':
+                result = convert_type(result, values['fileType'])
             return send_file(BytesIO(result),
-                             attachment_filename=filename + EXTENSIONS[data['fileType']],
+                             attachment_filename=filename + EXTENSIONS[values['fileType']],
                              as_attachment=True,
-                             mimetype=MIMETYPES[data['fileType']])
+                             mimetype=MIMETYPES[values['fileType']])
     except Exception, e:
         print e
         raise InvalidUsage(e.message, status_code=500)
