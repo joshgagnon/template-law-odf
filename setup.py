@@ -10,5 +10,6 @@ setup(name='template-law-odf',
      # packages=['template-law-odf'],
       install_requires=[
           'secretary',
+          'flask'
       ],
       zip_safe=False)
