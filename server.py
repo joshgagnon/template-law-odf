@@ -2,16 +2,21 @@ from secretary import Renderer
 import logging
 from flask import Flask, request, send_file
 from flask import jsonify
+import os
 import os.path
 from io import BytesIO
 import tempfile
-from subprocess import call
+from subprocess import Popen, STDOUT
 import shutil
 import errno
 
+try:
+    from subprocess import DEVNULL  # py3k
+except ImportError:
+    import os
+    DEVNULL = open(os.devnull, 'wb')
 
 logging.basicConfig()
-
 
 PORT = 5668
 SOFFICE_BIN = '/Applications/LibreOffice.app/Contents/MacOS/soffice'
@@ -32,74 +37,20 @@ EXTENSIONS = {
 }
 
 
-data = {
-    "dateString": "14 January 2016",
-    "formName": 'Letter of Engagement',
-    "fileType": "docx",
-    "recipient": {
-        "individuals": [
-            {
-                "firstName": "Mike",
-                "lastName": "Jones"
-            },
-            {
-                "firstName": "Denny",
-                "lastName": "Dennysingers"
-            }
-        ],
-        "recipientType": "individuals",
-        "email": "kapow@pewpew.com",
-        "address": {
-            "street": "90 Power Ave",
-            "suburb": "Kingbo",
-            "postcode": "9666",
-            "city": "Sincity",
-            "country": "Atroika"
-        },
-    },
-    "matter": {
-        "matterType": "purchase",
-        "assets": [
-            {
-                "address": "60 Binge St"
-            },
-            {
-                "address": "66 Catwalk Blv"
-            }]
-    },
-    "sender": "Thomas Bloy",
-        "mappings": {
-        "price": {
-            "purchase": "$880",
-            "sale": "$780",
-            "refinance": "$680"
-        },
-        "sender": {
-            "Thomas Bloy": {
-                "phone": "+64 274 538 552",
-                "title": "Director",
-                "email": "thomas@evolutionlawyers.nz"
-            },
-            "Tamina Cunningham-Adams": {
-                "phone": "+64 021 1515 137",
-                "title": "Director",
-                "email": "tamina@evolutionlawyers.nz"
-            }
-        }
-    }
-}
-
-
 def convert_type(data, type):
     env_path = tempfile.mkdtemp()
     try:
-        temp_in = tempfile.NamedTemporaryFile(suffix='.odt')
-
-        with tempfile.NamedTemporaryFile(suffix='.odt') as temp_in, tempfile.NamedTemporaryFile(suffix=EXTENSIONS[type]) as temp_out:
+        with tempfile.NamedTemporaryFile(suffix='.odt') as temp_in:
             temp_in.write(data)
             temp_in.flush()
-            call([SOFFICE_BIN, "-env:UserInstallation=file://%s" % env_path,  "--headless", "--invisible", "--convert-to", "pdf", "--outdir", temp_out.name, temp_in.name])
-            return temp_out.read()
+            args = [SOFFICE_BIN, "-env:UserInstallation=file://%s" % env_path, "--headless",
+                 "--invisible", "--convert-to", "pdf",  "--outdir", env_path, temp_in.name]
+            Popen(args,
+                 stdout=DEVNULL,
+                 stderr=STDOUT,
+                 env={}).wait()
+            with open(os.path.join(env_path, '%s.%s' % (os.path.basename(temp_in.name)[:-4], type))) as temp_out:
+                return temp_out.read()
     except Exception, e:
         raise e
     finally:
@@ -108,7 +59,6 @@ def convert_type(data, type):
         except OSError as exc:
             if exc.errno != errno.ENOENT:  # ENOENT - no such file or directory
                 raise  # re-raise exception
-
 
 
 class InvalidUsage(Exception):
@@ -130,7 +80,7 @@ class InvalidUsage(Exception):
 @app.route('/render')
 def render():
     try:
-        #datax = request.get_json(force=True)
+        data = request.get_json(force=True)
         with open('templates/' + os.path.basename(data['formName']) + '.odt') as template:
             result = engine.render(template, **data)
             filename = os.path.basename(data.get('fileName', data['formName']))
