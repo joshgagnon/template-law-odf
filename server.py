@@ -1,4 +1,4 @@
-from secretary import Renderer
+
 import logging
 from flask import Flask, request, send_file
 from flask import jsonify
@@ -9,7 +9,7 @@ import tempfile
 from subprocess import Popen, STDOUT
 import shutil
 import errno
-
+from render import render_odt
 try:
     from subprocess import DEVNULL  # py3k
 except ImportError:
@@ -21,7 +21,7 @@ logging.basicConfig()
 PORT = 5668
 SOFFICE_BIN = '/Applications/LibreOffice.app/Contents/MacOS/soffice'
 
-engine = Renderer()
+
 app = Flask(__name__)
 
 MIMETYPES = {
@@ -81,20 +81,18 @@ class InvalidUsage(Exception):
 @app.route('/render', methods=['POST'])
 def render():
     try:
-        print 'rendering'
         data = request.get_json(force=True)
+        form_name = os.path.basename(data['formName'])
         values = data['values']
-        print values
-        with open('templates/' + os.path.basename(data['formName']) + '.odt') as template:
-
-            result = engine.render(template, **values)
-            filename = os.path.basename(values.get('fileName', data['formName']))
-            if values['fileType'] != 'odt':
-                result = convert_type(result, values['fileType'])
-            return send_file(BytesIO(result),
-                             attachment_filename=filename + EXTENSIONS[values['fileType']],
-                             as_attachment=True,
-                             mimetype=MIMETYPES[values['fileType']])
+        result = render_odt(form_name, values)
+        filename = os.path.basename(values.get('fileName', data['formName']))
+        file_type = values.get('fileType', 'odt')
+        if file_type != 'odt':
+            result = convert_type(result, file_type)
+        return send_file(BytesIO(result),
+                         attachment_filename=filename + EXTENSIONS[file_type],
+                         as_attachment=True,
+                         mimetype=MIMETYPES[file_type])
     except Exception, e:
         print e
         raise InvalidUsage(e.message, status_code=500)
