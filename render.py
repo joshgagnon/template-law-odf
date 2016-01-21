@@ -1,18 +1,19 @@
 from secretary import Renderer
 engine = Renderer()
 
-def bool_to_list(boolean):
-    if boolean:
-        return [{}]
-    return []
 
-def inv_bool_to_list(boolean):
-    if not boolean:
-        return [{}]
-    return []
+def join_and(items=[], attribute=None):
+    if attribute:
+        items = map(lambda x: x.get(attribute), items)
+    if not len(items):
+        return 'UNKNOWN'
+    elif len(items) == 1:
+        return items[0] or 'UNKNOWN'
+    return '%s and %s' % (', '.join(items[:len(items)-1]), items[-1])
 
-engine.environment.filters['bool_to_list'] = bool_to_list
-engine.environment.filters['inv_bool_to_list'] = inv_bool_to_list
+
+engine.environment.filters['join_and'] = join_and
+
 
 def render_odt(form_name, values):
     with open('templates/' + form_name + '.odt') as template:
