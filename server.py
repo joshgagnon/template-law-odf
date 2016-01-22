@@ -19,7 +19,7 @@ except ImportError:
 logging.basicConfig()
 
 PORT = 5668
-SOFFICE_BIN = '/Applications/LibreOffice.app/Contents/MacOS/soffice'
+SOFFICE_BIN = 'soffice'
 
 
 app = Flask(__name__)
@@ -45,7 +45,8 @@ def convert_type(data, type):
             temp_in.write(data)
             temp_in.flush()
             args = [SOFFICE_BIN, "-env:UserInstallation=file://%s" % env_path, "--headless",
-                 "--invisible", "--convert-to", "pdf",  "--outdir", env_path, temp_in.name]
+                 "--invisible", "--convert-to", type,  "--outdir", env_path, temp_in.name]
+            print args
             Popen(args,
                  stdout=DEVNULL,
                  stderr=STDOUT,
