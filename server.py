@@ -86,7 +86,7 @@ def render():
         form_name = os.path.basename(data['formName'])
         values = data['values']
         result = render_odt(form_name, values)
-        filename = os.path.basename(values.get('fileName', data['formName']))
+        filename = os.path.basename(values.get('filename', data['formName']))
         file_type = values.get('fileType', 'odt')
         if file_type != 'odt':
             result = convert_type(result, file_type)
