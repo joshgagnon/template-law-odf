@@ -68,5 +68,10 @@ class TestRender(unittest.TestCase):
     def test_0004_letter_of_engagment_conveyancing(self):
         render_odt('CV01: Letter of Engagement - Conveyancing', default_data)
 
+    def test_0005_settlment_undertakings_letter(self):
+        render_odt('CV03: Settlement Undertakings Letter - Acting for Purchaser', default_data)
+
+
+
 if __name__ == '__main__':
     unittest.main()
