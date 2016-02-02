@@ -1,0 +1,39 @@
+{
+    "dateString": "sunt in et eius",
+    "recipient": {
+        "companyName": "quos eos",
+        "contact": "mollitia laudantium consequatur",
+        "recipientType": "company"
+    },
+    "contactMethod": {
+        "address": {
+            "street": "eaque delectus molestiae",
+            "city": "in"
+        },
+        "email": "nobis omnis",
+        "method": "post"
+    },
+    "matter": {
+        "matterId": "incidunt",
+        "mortgageInstrumentNumber": "rem",
+        "transferInstrumentNumber": "qui atque",
+        "assets": [
+            {
+                "address": "temporibus consequatur"
+            }
+        ],
+        "eDealingNumber": "labore",
+        "matterType": "transfer instrument"
+    },
+    "sender": "Thomas Bloy",
+    "valediction": "sincerely",
+    "vendorNames": [
+        "quo impedit dolorem rerum",
+        "et"
+    ],
+    "purchaserNames": [
+        "quia eos corporis",
+        "provident necessitatibus ut",
+        "dicta commodi inventore modi"
+    ]
+}

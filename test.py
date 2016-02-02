@@ -3,7 +3,6 @@ from render import render_odt
 from collections import defaultdict
 import json
 
-d = defaultdict(dict)
 
 mappings = {
     "sender": {
@@ -19,42 +18,6 @@ mappings = {
         }
     },
     "price": {}
-}
-
-
-default_data = {
-    "contactMethod": {
-        "email": "as",
-        "method": "email"
-    },
-    "dateString": "08 January 2016",
-    "documents": [
-        "asdfdasf",
-        "sdfsadf"
-    ],
-    "fee": {
-        "feeType": "none"
-    },
-    "fileType": "odt",
-    "mappings": mappings,
-    "matter": {
-        "description": "s",
-        "matterId": "as",
-        "name": "asdf",
-        "matterType": "taco"
-    },
-    "recipient": {
-        "individuals": [
-            {
-                "firstName": "sadf",
-                "lastName": "df"
-            }
-        ],
-        "recipientType": "individuals"
-    },
-    "sender": "Thomas Bloy",
-    "subject": "asdf",
-    "valediction": "sincerely"
 }
 
 
@@ -79,6 +42,10 @@ class TestRender(unittest.TestCase):
     def test_0005_settlment_undertakings_letter(self):
         with open('fixtures/CV03.json') as data:
             render_odt('CV03: Settlement Undertakings Letter - Acting for Purchaser', dict(json.loads(data.read()).items() + [("mappings", mappings)]))
+
+    def test_0006_settlment_undertakings_letter_vendor(self):
+        with open('fixtures/CV04.json') as data:
+            render_odt('CV04: Settlement Undertakings Letter - Acting for Vendor', dict(json.loads(data.read()).items() + [("mappings", mappings)]))
 
 
 if __name__ == '__main__':
