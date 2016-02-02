@@ -1,0 +1,47 @@
+{
+    "dateString": "et id dolorem laborum",
+    "recipient": {
+        "companyName": "rem dolores saepe labore",
+        "contact": "ipsum nihil alias nisi animi",
+        "recipientType": "company"
+    },
+    "contactMethod": {
+        "address": {
+            "postcode": "molestiae ut odit libero",
+            "country": "ipsum omnis voluptatem sed",
+            "city": "enim",
+            "street": "nam explicabo consequatur sit",
+            "suburb": "eveniet et voluptas est"
+        },
+        "method": "hand"
+    },
+    "matter": {
+        "matterId": "accusantium",
+        "assets": [
+            {}
+        ]
+    },
+    "sender": "Thomas Bloy",
+    "valediction": "faithfully",
+    "vendorNames": [
+        "rerum cumque ducimus nostrum sint",
+        "sit in eveniet aspernatur",
+        "id neque repellendus inventore",
+        "numquam placeat tenetur quidem",
+        "vitae numquam aspernatur"
+    ],
+    "purchaserNames": [
+        "nobis quo quisquam",
+        "voluptatem sed qui omnis sapiente"
+    ],
+    "fileType": "odt",
+    "accountNumber": "blanditiis",
+    "settlementAmount": "voluptas qui vero",
+    "time": "quis animi quod necessitatibus",
+    "paymentType": "same day cleared payment",
+    "status": {
+        "mode": ""
+    },
+    "ampm": "pm",
+    "filename": "commodi sit rerum"
+}

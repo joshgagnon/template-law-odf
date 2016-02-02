@@ -1,0 +1,38 @@
+{
+    "dateString": "doloribus quia placeat voluptate sunt",
+    "recipient": {
+        "companyName": "sit maxime",
+        "contact": "fugit a itaque id aut",
+        "recipientType": "company"
+    },
+    "contactMethod": {
+        "address": {
+            "street": "culpa dolore",
+            "city": "officiis error est cumque",
+            "country": "id eum",
+            "suburb": "optio ut dignissimos",
+            "postcode": "laborum omnis labore"
+        },
+        "email": "laudantium doloremque fugit",
+        "method": "courier"
+    },
+    "matter": {
+        "matterId": "aliquam cupiditate commodi praesentium",
+        "matterType": "purchase",
+        "assets": [
+            {
+                "address": "est in aut",
+                "required": [
+                    "address"
+                ]
+            },
+            {
+                "address": "blanditiis"
+            }
+        ]
+    },
+    "disclosure": "aspernatur labore sequi atque voluptatem",
+    "sender": "Thomas Bloy",
+    "valediction": "faithfully",
+    "filename": "autem"
+}

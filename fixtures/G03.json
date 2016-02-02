@@ -1,0 +1,31 @@
+{
+    "dateString": "nulla",
+    "recipient": {
+        "companyName": "velit esse voluptatum ipsum",
+        "contact": "deleniti itaque eos",
+        "recipientType": "company"
+    },
+    "contactMethod": {
+        "address": {
+            "street": "voluptatibus",
+            "city": "asperiores maiores eum officia"
+        },
+        "method": "post"
+    },
+    "matter": {
+        "matterId": "provident eum id aut enim",
+        "name": "recusandae omnis",
+        "reason": "id rerum illo iure alias"
+    },
+    "sender": "Thomas Bloy",
+    "valediction": "faithfully",
+    "status": {
+        "mode": "Private & Confidential"
+    },
+    "fileType": "odt",
+    "filename": "nostrum reprehenderit",
+    "documents": [
+        "sed cum illo",
+        "reiciendis qui enim"
+    ]
+}

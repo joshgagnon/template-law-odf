@@ -1,0 +1,34 @@
+{
+    "dateString": "aut voluptatem",
+    "recipient": {
+        "companyName": "architecto tempore",
+        "contact": "molestiae odit quo in",
+        "recipientType": "company"
+    },
+    "contactMethod": {
+        "address": {
+            "street": "ratione voluptatem",
+            "city": "ut et neque",
+            "country": "maiores nulla debitis",
+            "suburb": "debitis vero"
+        },
+        "method": "post",
+        "email": "nulla voluptatem aperiam vitae temporibus"
+    },
+    "matter": {
+        "matterId": "numquam necessitatibus",
+        "name": "deserunt culpa quidem quod"
+    },
+    "disclosure": "sit repudiandae inventore",
+    "sender": "Tamina Cunningham-Adams",
+    "valediction": "faithfully",
+    "fee": {
+        "description": "doloremque",
+        "services": "quo sed et",
+        "feeType": "estimated"
+    },
+    "filename": "ad voluptas recusandae",
+    "status": {
+        "message": "porro est"
+    }
+}
