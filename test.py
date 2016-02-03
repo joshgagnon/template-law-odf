@@ -47,6 +47,18 @@ class TestRender(unittest.TestCase):
         with open('fixtures/CV04.json') as data:
             render_odt('CV04: Settlement Undertakings Letter - Acting for Vendor', dict(json.loads(data.read()).items() + [("mappings", mappings)]))
 
+    def test_0007_mortgage(self):
+        with open('fixtures/CV05.json') as data:
+            render_odt('CV05: Mortgage Discharge Request', dict(json.loads(data.read()).items() + [("mappings", mappings)]))
+
+    def test_0008_settlement(self):
+        with open('fixtures/CV06.json') as data:
+            render_odt('CV06: Vendors Settlement Letter', dict(json.loads(data.read()).items() + [("mappings", mappings)]))
+
+    def test_0009_settlement(self):
+        with open('fixtures/CV07.json') as data:
+            render_odt('CV07: Letter to Financier Enclosing Originals', dict(json.loads(data.read()).items() + [("mappings", mappings)]))
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,0 +1,48 @@
+{
+    "dateString": "pariatur",
+    "recipient": {
+        "companyName": "animi ullam nisi",
+        "contact": "voluptatem eveniet et",
+        "recipientType": "company"
+    },
+    "contactMethod": {
+        "address": {
+            "street": "rerum illum minus omnis optio",
+            "city": "natus sed autem eius",
+            "postcode": "porro non nostrum"
+        },
+        "method": "post"
+    },
+    "matter": {
+        "matterId": "fugit ad",
+        "mortgageInstrumentNumber": "deleniti qui quo error omnis",
+        "assets": [
+            {
+                "address": "perferendis sequi sed doloribus"
+            },
+            {
+                "address": "dolorum tempore"
+            },
+            {
+                "address": "quibusdam sint dignissimos labore voluptatem"
+            },
+            {
+                "address": "officiis est occaecati"
+            }
+        ],
+        "matterType": "entered into an agreement to sell"
+    },
+    "sender": "Tamina Cunningham-Adams",
+    "valediction": "sincerely",
+    "ownerNames": [
+        "dolorem nobis porro corporis qui",
+        "corporis officiis ex commodi ipsa",
+        "voluptate et quam",
+        "asperiores magnam odio ut consectetur",
+        "incidunt veritatis rem aliquam maiores"
+    ],
+    "settlementDate": "aut earum sed eos",
+    "identifierNumber": "velit porro illum voluptates quaerat",
+    "registryLocation": "porro soluta rerum",
+    "fileType": "odt"
+}
