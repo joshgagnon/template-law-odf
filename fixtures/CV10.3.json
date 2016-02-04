@@ -1,0 +1,76 @@
+{
+    "dateString": "facilis facere ut voluptatem error",
+    "recipient": {
+        "individuals": [
+            {
+                "firstName": "dignissimos placeat",
+                "lastName": "dolorem"
+            },
+            {
+                "firstName": "nemo vel ipsa",
+                "lastName": "labore nulla minus"
+            },
+            {
+                "firstName": "provident qui voluptatem deserunt in",
+                "lastName": "voluptas eaque nihil"
+            }
+        ]
+    },
+    "contactMethod": {
+        "address": {
+            "street": "optio qui",
+            "city": "quidem",
+            "postcode": "officiis tempore aliquam iure cupiditate",
+            "country": "quam"
+        },
+        "email": "aut",
+        "method": "courier"
+    },
+    "matter": {
+        "matterId": "est itaque",
+        "matterType": "sale",
+        "assets": [
+            {
+                "address": "nihil dolorem iusto voluptatum"
+            }
+        ],
+        "deposit": {
+            "credit": 14743654.699958427,
+            "date": "totam quos ratione dolores",
+            "commission": 84936506
+        },
+        "credits": [
+            {
+                "credit": 52930443,
+                "date": "deleniti animi",
+                "description": "nulla iure placeat nesciunt"
+            },
+            {
+                "credit": 32100603.757034406,
+                "date": "qui veniam deserunt consequatur molestiae"
+            },
+            {
+                "credit": 42643401,
+                "date": "id nostrum similique pariatur hic"
+            },
+            {
+                "credit": 21007574,
+                "date": "praesentium"
+            }
+        ],
+        "repaymentOfIndebtedness": {
+            "mortgagee": "possimus et",
+            "debit": 32066.03527508676,
+            "date": "animi voluptate sapiente enim rem"
+        },
+        "balancePurchasePrice": {
+            "credit": 12665330.821315285,
+            "date": "eaque alias et animi explicabo"
+        }
+    },
+    "sender": "Thomas Bloy",
+    "valediction": "sincerely",
+    "settlementDate": "nam dicta",
+    "paidByTrust": {},
+    "filename": "unde"
+}

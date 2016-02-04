@@ -1,0 +1,71 @@
+{
+    "dateString": "explicabo saepe magni qui atque",
+    "recipient": {
+        "individuals": [
+            {
+                "firstName": "et voluptate non ea rem",
+                "lastName": "sed aut"
+            },
+            {
+                "firstName": "iste voluptatem",
+                "lastName": "dolor aut distinctio iure quaerat"
+            },
+            {
+                "firstName": "accusantium nesciunt voluptatum quia iste",
+                "lastName": "expedita temporibus similique"
+            }
+        ]
+    },
+    "contactMethod": {
+        "email": "possimus aliquam",
+        "address": {}
+    },
+    "matter": {
+        "matterId": "quia nobis quaerat",
+        "matterType": "purchase",
+        "assets": [
+            {
+                "address": "aliquid ut"
+            }
+        ],
+        "balancePurchasePrice": {
+            "credit": 28177535,
+            "date": "perferendis rem et"
+        },
+        "debits": [
+            {
+                "debit": 25379005.03547192,
+                "date": "cumque quod et enim similique",
+                "description": "omnis quae quisquam praesentium"
+            },
+            {
+                "debit": 41643947,
+                "date": "ducimus id minus aut nostrum"
+            },
+            {
+                "debit": 35215351,
+                "date": "fugit ipsum soluta ratione",
+                "description": "ab laboriosam expedita natus"
+            },
+            {
+                "debit": 60567522.86686658,
+                "date": "id et molestias"
+            }
+        ],
+        "credits": [
+            {
+                "credit": 14215195,
+                "date": "officiis",
+                "description": "quo et quam repellendus"
+            },
+            {
+                "credit": 29475210,
+                "date": "qui quaerat"
+            }
+        ]
+    },
+    "sender": "Tamina Cunningham-Adams",
+    "valediction": "sincerely",
+    "fileType": "pdf",
+    "filename": "est perferendis similique quas libero"
+}

@@ -1,0 +1,100 @@
+{
+    "dateString": "et expedita aliquid et",
+    "recipient": {
+        "individuals": [
+            {
+                "firstName": "nihil et",
+                "lastName": "excepturi culpa dolor maxime"
+            },
+            {
+                "firstName": "praesentium id",
+                "lastName": "ad amet voluptatem non illo"
+            },
+            {
+                "firstName": "expedita nemo non mollitia",
+                "lastName": "laudantium veritatis vel veniam"
+            },
+            {
+                "firstName": "quod voluptates odio sequi nobis",
+                "lastName": "maiores rerum porro"
+            }
+        ],
+        "recipientType": "individuals"
+    },
+    "contactMethod": {
+        "address": {
+            "street": "accusamus rerum eius",
+            "city": "eligendi",
+            "country": "ut laudantium ratione libero"
+        }
+    },
+    "matter": {
+        "matterId": "consequatur",
+        "matterType": "refinance",
+        "assets": [
+            {
+                "address": "facilis"
+            }
+        ],
+        "loadAdvance": {
+            "financier": "dolorum"
+        },
+        "debits": [
+            {
+                "debit": 87048527,
+                "date": "quis",
+                "description": "ipsa et facilis nam voluptates"
+            },
+            {
+                "debit": 67798326,
+                "date": "molestiae sed veritatis vero",
+                "description": "voluptatem"
+            },
+            {
+                "debit": 17216250.325463496,
+                "date": "sapiente",
+                "description": "in consequatur"
+            },
+            {
+                "debit": 87526610,
+                "date": "nemo"
+            }
+        ],
+        "credits": [
+            {
+                "credit": 91136311,
+                "date": "qui neque dolores eaque aspernatur"
+            },
+            {
+                "credit": 53480069,
+                "date": "molestias quia dolorem",
+                "description": "et at"
+            }
+        ],
+        "balancePurchasePrice": {
+            "debit": 40540240,
+            "date": "voluptatem"
+        },
+        "clients": [
+            {
+                "clientName": "consequatur fuga soluta ullam aliquid"
+            },
+            {
+                "clientName": "ratione",
+                "kiwiSaverWithdrawal": {
+                    "date": "natus rerum"
+                },
+                "kiwiSaverHomeStart": {
+                    "date": "quam quis"
+                }
+            }
+        ]
+    },
+    "sender": "Thomas Bloy",
+    "valediction": "sincerely",
+    "filename": "et reprehenderit omnis",
+    "fileType": "docx",
+    "status": {
+        "mode": "Without Prejudice (save as to costs)"
+    }
+}
