@@ -73,5 +73,11 @@ class TestRender(unittest.TestCase):
                 render_odt('CV10: Trust Account Statement',
                            dict(json.loads(data.read()).items() + [("mappings", mappings)]))
 
+    def test_0011_demand(self):
+        with open('fixtures/DR01.json') as data:
+            render_odt('DR01: Letter of Demand',
+                       dict(json.loads(data.read()).items() + [("mappings", mappings)]))
+
+
 if __name__ == '__main__':
     unittest.main()
