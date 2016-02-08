@@ -32,7 +32,8 @@ def sum_debits_credits(args, debits=True, credits=True):
 
 
 def format_number(number):
-    return '{:20,.2f}'.format(number or 0)
+    return '{:,.2f}'.format(number or 0)
+
 
 def currency(string):
     return '$%s' % string

@@ -1,0 +1,60 @@
+{
+    "dateString": "est omnis deserunt",
+    "recipient": {
+        "individuals": [
+            {
+                "firstName": "et et autem velit",
+                "lastName": "ea impedit voluptas aut"
+            },
+            {
+                "firstName": "qui nisi modi odio nostrum",
+                "lastName": "consequatur hic asperiores est"
+            },
+            {
+                "firstName": "et",
+                "lastName": "quasi molestias est"
+            },
+            {
+                "firstName": "nostrum consequatur accusamus totam aut",
+                "lastName": "eaque est aperiam occaecati"
+            }
+        ],
+        "recipientType": "individuals"
+    },
+    "contactMethod": {
+        "address": {
+            "street": "neque",
+            "city": "sint inventore libero qui"
+        }
+    },
+    "matter": {
+        "matterId": "voluptas ut"
+    },
+    "sender": "Tamina Cunningham-Adams",
+    "valediction": "sincerely",
+    "creditor": "et voluptas quia aliquam alias",
+    "debtor": "voluptatem iusto nam debitis",
+    "documentName": "ut",
+    "documentDate": "a corporis aspernatur",
+    "breakdown": {
+        "principalSum": {
+            "amount": 16505526.77634214,
+            "date": "quam"
+        },
+        "interestAccrued": {
+            "amount": 89577863,
+            "dateStart": "excepturi",
+            "dateEnd": "iure voluptas sit dolorem eum"
+        },
+        "costsToCreditor": {
+            "amount": 95508791
+        },
+        "show": "Yes",
+        "calculatedAmount": -19222310
+    },
+    "filename": "rerum illo fugiat illum",
+    "deadline": "aut excepturi voluptates",
+    "status": {},
+    "debtDate": "culpa ullam nemo itaque ratione",
+    "totalIndebtedness": 96459974.71613042
+}
