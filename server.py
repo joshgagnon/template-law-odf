@@ -27,13 +27,17 @@ app = Flask(__name__)
 MIMETYPES = {
     'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'odt': 'application/vnd.oasis.opendocument.text',
-    'pdf': 'application/pdf'
+    'pdf': 'application/pdf',
+    "png": "image/png",
+    "html": "text/html",
 }
 
 EXTENSIONS = {
     'pdf': '.pdf',
     'odt': '.odt',
-    'docx': '.docx'
+    'docx': '.docx',
+    'png': '.png',
+    'html': '.html'
 }
 
 
@@ -88,7 +92,7 @@ def render():
         result = render_odt(form_name, values)
         filename = os.path.basename(values.get('filename', data['formName']))
         file_type = values.get('fileType', 'odt')
-        if file_type != 'odt':
+        if file_type != 'odt' and EXTENSIONS.get(file_type):
             result = convert_type(result, file_type)
         return send_file(BytesIO(result),
                          attachment_filename=filename + EXTENSIONS[file_type],
@@ -106,5 +110,6 @@ def handle_invalid_usage(error):
     return response
 
 if __name__ == '__main__':
+    SOFFICE_BIN = '/Applications/LibreOffice.app/Contents/MacOS/soffice'
     print 'Running on', PORT
     app.run(port=PORT, debug=True)
