@@ -1,4 +1,6 @@
-
+from __future__ import print_function
+import signal
+import subprocess
 import logging
 from flask import Flask, request, send_file
 from flask import jsonify
@@ -20,7 +22,8 @@ logging.basicConfig()
 
 PORT = 5668
 SOFFICE_BIN = 'soffice'
-
+SOFFICE_PYTHON = 'python3'
+CONVERTER = 'DocumentConverter.py'
 
 app = Flask(__name__)
 
@@ -44,20 +47,20 @@ EXTENSIONS = {
 
 def convert_type(data, type):
     env_path = tempfile.mkdtemp()
+
     try:
         with tempfile.NamedTemporaryFile(suffix='.odt') as temp_in:
             temp_in.write(data)
             temp_in.flush()
             args = [SOFFICE_BIN, "-env:UserInstallation=file://%s" % env_path, "--headless",
                  "--invisible", "--convert-to", type,  "--outdir", env_path, temp_in.name]
-            print args
             Popen(args,
                  stdout=DEVNULL,
                  stderr=STDOUT,
                  env={}).wait()
-            with open(os.path.join(env_path, '%s.%s' % (os.path.basename(temp_in.name)[:-4], type))) as temp_out:
+            with open(temp_out.name) as temp_out:
                 return temp_out.read()
-    except Exception, e:
+    except Exception as e:
         raise e
     finally:
         try:
@@ -65,6 +68,21 @@ def convert_type(data, type):
         except OSError as exc:
             if exc.errno != errno.ENOENT:  # ENOENT - no such file or directory
                 raise  # re-raise exception
+
+def convert_type_service(data, type):
+    try:
+        with tempfile.NamedTemporaryFile(suffix='.odt') as temp_in, tempfile.NamedTemporaryFile(suffix=EXTENSIONS[type]) as temp_out:
+            temp_in.write(data)
+            temp_in.flush()
+            args = [SOFFICE_PYTHON, CONVERTER, temp_in.name, temp_out.name]
+            print(args)
+            Popen(args,
+                 stdout=DEVNULL,
+                 stderr=STDOUT,
+                 env={}).wait()
+            return temp_out.read()
+    except Exception as e:
+        raise e
 
 
 class InvalidUsage(Exception):
@@ -93,13 +111,13 @@ def render():
         filename = os.path.basename(values.get('filename', data['formName']))
         file_type = values.get('fileType', 'odt')
         if file_type != 'odt' and EXTENSIONS.get(file_type):
-            result = convert_type(result, file_type)
+            result = convert_type_service(result, file_type)
         return send_file(BytesIO(result),
                          attachment_filename=filename + EXTENSIONS[file_type],
                          as_attachment=True,
                          mimetype=MIMETYPES[file_type])
-    except Exception, e:
-        print e
+    except Exception as e:
+        print(e)
         raise InvalidUsage(e.message, status_code=500)
 
 
@@ -109,7 +127,9 @@ def handle_invalid_usage(error):
     response.status_code = error.status_code
     return response
 
+
 if __name__ == '__main__':
+    SOFFICE_PYTHON = '/Applications/LibreOffice.app/Contents/MacOS/python'
     SOFFICE_BIN = '/Applications/LibreOffice.app/Contents/MacOS/soffice'
-    print 'Running on', PORT
+    print('Running on %d' % PORT)
     app.run(port=PORT, debug=True)
