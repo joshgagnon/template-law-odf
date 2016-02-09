@@ -4,9 +4,9 @@ import datetime
 engine = Renderer()
 
 
-def join_and(items=[], attribute=None):
-    if attribute:
-        items = map(lambda x: x.get(attribute), items)
+def join_and(items=[], *attributes):
+    if attributes:
+        items = [' '.join(map(lambda attr: i.get(attr), attributes)) for i in items]
     if not len(items):
         return 'UNKNOWN'
     elif len(items) == 1:
