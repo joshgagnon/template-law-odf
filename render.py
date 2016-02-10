@@ -36,6 +36,8 @@ def format_number(number):
 
 
 def currency(string):
+    if string and string[0] == '$':
+        return string
     return '$%s' % string
 
 
