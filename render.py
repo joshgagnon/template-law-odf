@@ -42,11 +42,17 @@ def currency(string):
     return '$%s' % string
 
 
+def percentage(string):
+    if string and string[-1] == '%':
+        return string
+    return '%s%%' % string
+
 engine.environment.filters['join_and'] = join_and
 engine.environment.filters['week_day'] = week_day
 engine.environment.filters['sum_debits_credits'] = sum_debits_credits
 engine.environment.filters['format_number'] = format_number
 engine.environment.filters['currency'] = currency
+engine.environment.filters['percentage'] = percentage
 
 
 def render_odt(form_name, values):
