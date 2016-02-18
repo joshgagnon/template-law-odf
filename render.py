@@ -1,5 +1,8 @@
 from secretary import Renderer
 import datetime
+import inflect
+
+inflect_engine = inflect.engine()
 
 engine = Renderer()
 
@@ -47,12 +50,17 @@ def percentage(string):
         return string
     return '%s%%' % string
 
+
+def number_to_words(num):
+    return inflect_engine.number_to_words(num or 0)
+
 engine.environment.filters['join_and'] = join_and
 engine.environment.filters['week_day'] = week_day
 engine.environment.filters['sum_debits_credits'] = sum_debits_credits
 engine.environment.filters['format_number'] = format_number
 engine.environment.filters['currency'] = currency
 engine.environment.filters['percentage'] = percentage
+engine.environment.filters['number_to_words'] = number_to_words
 
 
 def render_odt(form_name, values):
