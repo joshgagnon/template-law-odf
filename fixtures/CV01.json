@@ -3,18 +3,17 @@
     "recipient": {
         "companyName": "sit maxime",
         "contact": "fugit a itaque id aut",
-        "recipientType": "company"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "culpa dolore",
-            "city": "officiis error est cumque",
-            "country": "id eum",
-            "suburb": "optio ut dignissimos",
-            "postcode": "laborum omnis labore"
-        },
-        "email": "laudantium doloremque fugit",
-        "method": "courier"
+        "recipientType": "company",
+        "contactMethod": {
+            "address": [
+                "culpa dolore",
+                "officiis error est cumque",
+                "id eum",
+                "optio ut dignissimos",
+                "laborum omnis labore"],
+            "email": "laudantium doloremque fugit",
+            "method": "courier"
+        }
     },
     "matter": {
         "matterId": "aliquam cupiditate commodi praesentium",

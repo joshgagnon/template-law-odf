@@ -19,12 +19,14 @@
                 "lastName": "eaque est aperiam occaecati"
             }
         ],
-        "recipientType": "individuals"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "neque",
-            "city": "sint inventore libero qui"
+        "recipientType": "individuals",
+        "contactMethod": {
+            "address": [
+                "culpa dolore",
+                "officiis error est cumque",
+                "id eum",
+                "optio ut dignissimos",
+                "laborum omnis labore"]
         }
     },
     "matter": {

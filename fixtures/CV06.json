@@ -15,15 +15,14 @@
                 "lastName": "aut magnam esse"
             }
         ],
-        "recipientType": "individuals"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "sed minus vel itaque",
-            "city": "enim ab quibusdam",
-            "suburb": "dolorum ut fugit saepe architecto",
-            "country": "sapiente sit rem quia",
-            "postcode": "fuga"
+        "recipientType": "individuals",
+        "contactMethod": {
+            "address": [
+                "culpa dolore",
+                "officiis error est cumque",
+                "id eum",
+                "optio ut dignissimos",
+                "laborum omnis labore"]
         }
     },
     "matter": {

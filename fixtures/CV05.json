@@ -3,15 +3,15 @@
     "recipient": {
         "companyName": "animi ullam nisi",
         "contact": "voluptatem eveniet et",
-        "recipientType": "company"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "rerum illum minus omnis optio",
-            "city": "natus sed autem eius",
-            "postcode": "porro non nostrum"
-        },
-        "method": "post"
+        "recipientType": "company",
+        "contactMethod": {
+            "address": [
+                "rerum illum minus omnis optio",
+                 "natus sed autem eius",
+                 "porro non nostrum"
+            ],
+            "method": "post"
+        }
     },
     "matter": {
         "matterId": "fugit ad",

@@ -3,14 +3,16 @@
     "recipient": {
         "companyName": "velit esse voluptatum ipsum",
         "contact": "deleniti itaque eos",
-        "recipientType": "company"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "voluptatibus",
-            "city": "asperiores maiores eum officia"
-        },
-        "method": "post"
+        "recipientType": "company",
+        "contactMethod": {
+            "address": [
+                    "culpa dolore",
+                    "officiis error est cumque",
+                    "id eum",
+                    "optio ut dignissimos",
+                    "laborum omnis labore"],
+            "method": "post"
+        }
     },
     "matter": {
         "matterId": "provident eum id aut enim",

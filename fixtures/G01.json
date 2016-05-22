@@ -4,14 +4,16 @@
     "recipient": {
         "companyName": "dolor",
         "contact": "consequuntur ipsam",
-        "recipientType": "company"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "necessitatibus veritatis architecto iure nihil",
-            "city": "dolorem delectus eligendi"
-        },
-        "email": "similique aut ipsam itaque"
+        "recipientType": "company",
+        "contactMethod": {
+            "address": [
+                "culpa dolore",
+                "officiis error est cumque",
+                "id eum",
+                "optio ut dignissimos",
+                "laborum omnis labore"],
+            "email": "similique aut ipsam itaque"
+        }
     },
     "matter": {
         "matterId": "ipsam"

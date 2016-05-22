@@ -14,17 +14,17 @@
                 "firstName": "provident qui voluptatem deserunt in",
                 "lastName": "voluptas eaque nihil"
             }
-        ]
-    },
-    "contactMethod": {
-        "address": {
-            "street": "optio qui",
-            "city": "quidem",
-            "postcode": "officiis tempore aliquam iure cupiditate",
-            "country": "quam"
-        },
-        "email": "aut",
-        "method": "courier"
+        ],
+        "contactMethod": {
+            "address": [
+                "culpa dolore",
+                "officiis error est cumque",
+                "id eum",
+                "optio ut dignissimos",
+                "laborum omnis labore"],
+            "email": "aut",
+            "method": "courier"
+        }
     },
     "matter": {
         "matterId": "est itaque",

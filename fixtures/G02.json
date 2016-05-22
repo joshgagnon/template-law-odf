@@ -3,17 +3,17 @@
     "recipient": {
         "companyName": "architecto tempore",
         "contact": "molestiae odit quo in",
-        "recipientType": "company"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "ratione voluptatem",
-            "city": "ut et neque",
-            "country": "maiores nulla debitis",
-            "suburb": "debitis vero"
-        },
-        "method": "post",
-        "email": "nulla voluptatem aperiam vitae temporibus"
+        "recipientType": "company",
+        "contactMethod": {
+            "address": [
+                "culpa dolore",
+                "officiis error est cumque",
+                "id eum",
+                "optio ut dignissimos",
+                "laborum omnis labore"],
+            "method": "post",
+            "email": "nulla voluptatem aperiam vitae temporibus"
+        }
     },
     "matter": {
         "matterId": "numquam necessitatibus",

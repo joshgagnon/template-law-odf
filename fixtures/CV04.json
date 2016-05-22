@@ -3,15 +3,17 @@
     "recipient": {
         "companyName": "quos eos",
         "contact": "mollitia laudantium consequatur",
-        "recipientType": "company"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "eaque delectus molestiae",
-            "city": "in"
-        },
-        "email": "nobis omnis",
-        "method": "post"
+        "recipientType": "company",
+        "contactMethod": {
+            "address": [
+                "culpa dolore",
+                "officiis error est cumque",
+                "id eum",
+                "optio ut dignissimos",
+                "laborum omnis labore"],
+            "email": "nobis omnis",
+            "method": "post"
+        }
     },
     "matter": {
         "matterId": "incidunt",

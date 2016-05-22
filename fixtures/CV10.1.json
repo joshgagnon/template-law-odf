@@ -19,13 +19,14 @@
                 "lastName": "maiores rerum porro"
             }
         ],
-        "recipientType": "individuals"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "accusamus rerum eius",
-            "city": "eligendi",
-            "country": "ut laudantium ratione libero"
+        "recipientType": "individuals",
+        "contactMethod": {
+            "address": [
+                "culpa dolore",
+                "officiis error est cumque",
+                "id eum",
+                "optio ut dignissimos",
+                "laborum omnis labore"]
         }
     },
     "matter": {

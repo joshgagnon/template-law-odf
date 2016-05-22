@@ -14,11 +14,11 @@
                 "firstName": "accusantium nesciunt voluptatum quia iste",
                 "lastName": "expedita temporibus similique"
             }
-        ]
-    },
-    "contactMethod": {
-        "email": "possimus aliquam",
-        "address": {}
+        ],
+        "contactMethod": {
+            "email": "possimus aliquam",
+            "address": []
+        }
     },
     "matter": {
         "matterId": "quia nobis quaerat",

@@ -3,17 +3,16 @@
     "recipient": {
         "companyName": "rem dolores saepe labore",
         "contact": "ipsum nihil alias nisi animi",
-        "recipientType": "company"
-    },
-    "contactMethod": {
-        "address": {
-            "postcode": "molestiae ut odit libero",
-            "country": "ipsum omnis voluptatem sed",
-            "city": "enim",
-            "street": "nam explicabo consequatur sit",
-            "suburb": "eveniet et voluptas est"
-        },
-        "method": "hand"
+        "recipientType": "company",
+        "contactMethod": {
+            "address": [
+                    "culpa dolore",
+                    "officiis error est cumque",
+                    "id eum",
+                    "optio ut dignissimos",
+                    "laborum omnis labore"],
+            "method": "hand"
+        }
     },
     "matter": {
         "matterId": "accusantium",

@@ -3,18 +3,21 @@
     "recipient": {
         "companyName": "aut ea aut",
         "contact": "esse officia amet tenetur",
-        "recipientType": "company"
-    },
-    "contactMethod": {
-        "address": {
-            "street": "nam qui",
-            "city": "qui rerum aut aut ea"
-        },
-        "email": "eum",
-        "method": "post"
+        "recipientType": "company",
+        "contactMethod": {
+            "address": [
+                "culpa dolore",
+                "officiis error est cumque",
+                "id eum",
+                "optio ut dignissimos",
+                "laborum omnis labore"],
+            "email": "eum",
+            "method": "post"
+        }
     },
     "matter": {
-        "matterId": "consequatur nesciunt"
+        "matterId": "consequatur nesciunt",
+        "matterType": "purchase"
     },
     "sender": "Tamina Cunningham-Adams",
     "valediction": "faithfully",

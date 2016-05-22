@@ -24,7 +24,7 @@ class TestRender(unittest.TestCase):
 
     def test_0001_letter_template(self):
         with open('fixtures/G01.json') as data:
-            render_odt('G01: Letter',
+            render_odt('G01: Letter Template',
                        dict(json.loads(data.read()).items() + [("mappings", mappings)]))
 
     def test_0002_letter_of_engagement(self):
@@ -57,12 +57,12 @@ class TestRender(unittest.TestCase):
             render_odt('CV05: Mortgage Discharge Request',
                        dict(json.loads(data.read()).items() + [("mappings", mappings)]))
 
-    def test_0008_settlement(self):
+    def test_0008_vendors_settlement(self):
         with open('fixtures/CV06.json') as data:
             render_odt('CV06: Vendors Settlement Letter',
                        dict(json.loads(data.read()).items() + [("mappings", mappings)]))
 
-    def test_0009_settlement(self):
+    def test_0009_financier(self):
         with open('fixtures/CV07.json') as data:
             render_odt('CV07: Letter to Financier Enclosing Originals',
                        dict(json.loads(data.read()).items() + [("mappings", mappings)]))
@@ -75,7 +75,7 @@ class TestRender(unittest.TestCase):
 
     def test_0011_demand(self):
         with open('fixtures/DR01.json') as data:
-            render_odt('DR01: Letter of Demand',
+            render_odt('DR01: Letter of Demand - Debtor',
                        dict(json.loads(data.read()).items() + [("mappings", mappings)]))
 
 
