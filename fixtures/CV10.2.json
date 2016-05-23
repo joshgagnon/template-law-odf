@@ -22,7 +22,9 @@
     },
     "matter": {
         "matterId": "quia nobis quaerat",
-        "matterType": "purchase",
+        "conveyancing": {
+            "matterType": "purchase"
+        },
         "assets": [
             {
                 "address": "aliquid ut"

@@ -28,7 +28,9 @@
     },
     "matter": {
         "matterId": "est itaque",
-        "matterType": "sale",
+        "conveyancing": {
+            "matterType": "sale"
+        },
         "assets": [
             {
                 "address": "nihil dolorem iusto voluptatum"

@@ -17,7 +17,9 @@
     },
     "matter": {
         "matterId": "aliquam cupiditate commodi praesentium",
-        "matterType": "purchase",
+        "conveyancing": {
+            "matterType": "purchase"
+        },
         "assets": [
             {
                 "address": "est in aut",

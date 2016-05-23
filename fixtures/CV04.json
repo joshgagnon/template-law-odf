@@ -17,7 +17,6 @@
     },
     "matter": {
         "matterId": "incidunt",
-        "mortgageInstrumentNumber": "rem",
         "transferInstrumentNumber": "qui atque",
         "assets": [
             {
@@ -25,7 +24,10 @@
             }
         ],
         "eDealingNumber": "labore",
-        "matterType": "transfer instrument"
+        "conveyancing": {
+        "mortgageInstrumentNumber": "rem",
+            "matterType": "transfer instrument"
+        }
     },
     "sender": "Thomas Bloy",
     "valediction": "sincerely",

@@ -31,7 +31,9 @@
     },
     "matter": {
         "matterId": "consequatur",
-        "matterType": "refinance",
+        "conveyancing": {
+            "matterType": "refinance"
+        },
         "assets": [
             {
                 "address": "facilis"
