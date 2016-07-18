@@ -16,7 +16,27 @@ mappings = {
             "title": "Director"
         }
     },
-    "price": {}
+    "price": {},
+    "verbToNoun": {
+        "purchase": "purchasing",
+        "sale": "selling",
+        "refinance": "refinancing"
+    },
+     "price": {
+        "purchase": "$880",
+        "sale": "$780",
+        "refinance": "$680"
+    },
+    "disbursements": {
+        "purchase": "$160",
+        "sale": "$80",
+        "refinance": "$160"
+    },
+    "priceIncGST": {
+        "purchase": "$1,205.75",
+        "sale": "$1,010.76",
+        "refinance": "$975.75"
+    }
 }
 
 

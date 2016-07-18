@@ -35,5 +35,12 @@
     "disclosure": "aspernatur labore sequi atque voluptatem",
     "sender": "Thomas Bloy",
     "valediction": "faithfully",
-    "filename": "autem"
+    "filename": "autem",
+    "mappings": {
+    "verbToNoun": {
+        "purchase": "purchasing",
+        "sale": "selling",
+        "refinance": "refinancing"
+    }
+    }
 }

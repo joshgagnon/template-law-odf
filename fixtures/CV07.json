@@ -17,7 +17,9 @@
     },
     "matter": {
         "matterId": "consequatur nesciunt",
-        "matterType": "purchase"
+        "letterFinancier": {
+            "matterType": "sale"
+        }
     },
     "sender": "Tamina Cunningham-Adams",
     "valediction": "faithfully",

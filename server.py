@@ -75,7 +75,6 @@ def convert_type_service(data, type):
             temp_in.write(data)
             temp_in.flush()
             args = [SOFFICE_PYTHON, CONVERTER, temp_in.name, temp_out.name]
-            print(args)
             Popen(args,
                  stdout=DEVNULL,
                  stderr=STDOUT,

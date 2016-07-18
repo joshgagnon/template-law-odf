@@ -1,6 +1,8 @@
 from secretary import Renderer
 import datetime
 import inflect
+import os
+
 
 inflect_engine = inflect.engine()
 
@@ -8,7 +10,6 @@ engine = Renderer()
 
 
 def join_and(items=[], *attributes):
-    print items, attributes
     if attributes:
         items = [' '.join(filter(lambda x: x, map(lambda attr: i.get(attr, ''), attributes))) for i in items]
     if not len(items):
@@ -63,7 +64,11 @@ engine.environment.filters['percentage'] = percentage
 engine.environment.filters['number_to_words'] = number_to_words
 
 
-def render_odt(form_name, values):
-    with open('templates/' + form_name + '.odt') as template:
+def render_odt(form_name, values, subdir=None):
+    form_path = [form_name + '.odt']
+    if subdir:
+        form_path.insert(0, subdir)
+    form_path.insert(0, 'templates')
+    with open(os.path.join(*form_path)) as template:
         result = engine.render(template, **values)
     return result
