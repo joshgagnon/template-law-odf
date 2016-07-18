@@ -106,7 +106,10 @@ def render():
         data = request.get_json(force=True)
         form_name = os.path.basename(data['formName'])
         values = data['values']
-        result = render_odt(form_name, values)
+        subdir = None
+        if data.get('goodCompaniesTemplate'):
+            subdir = 'goodcompanies'
+        result = render_odt(form_name, values, subdir=subdir)
         filename = os.path.basename(values.get('filename', data['formName']))
         file_type = values.get('fileType', 'odt')
         if file_type != 'odt' and EXTENSIONS.get(file_type):
