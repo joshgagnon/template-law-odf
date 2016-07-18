@@ -19,11 +19,7 @@ class TestRender(unittest.TestCase):
                 "effectiveDateString": "16th March 2012"
             },
             "transferors": [{"name": "Guy", "address": "house"}],
-            "transferorSignatories": [{"name": "Guy", "address": "house"}],
             "transferees": [{"name": "Mitch", "address": "house"}],
-            "transfereeSignatories": [{"name": "Mitch", "address": "house"}],
-
-
         }
         render_odt('transfer', data, subdir='goodcompanies')
 

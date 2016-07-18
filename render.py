@@ -69,6 +69,7 @@ def render_odt(form_name, values, subdir=None):
     if subdir:
         form_path.insert(0, subdir)
     form_path.insert(0, 'templates')
+
     with open(os.path.join(*form_path)) as template:
         result = engine.render(template, **values)
     return result
