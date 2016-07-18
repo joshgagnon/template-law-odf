@@ -4,7 +4,6 @@ import subprocess
 import logging
 from flask import Flask, request, send_file
 from flask import jsonify
-from flask.ext.cors import CORS, cross_origin
 import os
 import os.path
 from io import BytesIO
@@ -28,8 +27,7 @@ CONVERTER = 'DocumentConverter.py'
 
 
 app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+
 
 MIMETYPES = {
     'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
@@ -105,7 +103,6 @@ class InvalidUsage(Exception):
 
 
 @app.route('/render', methods=['POST'])
-@cross_origin()
 def render():
     try:
         data = request.get_json(force=True)
