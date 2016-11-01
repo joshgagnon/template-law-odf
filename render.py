@@ -11,9 +11,7 @@ engine = Renderer()
 
 def join_and(items=[], *attributes):
     if attributes:
-        print attributes
-        print items
-        items = [' '.join(filter(lambda x: x, reduce(lambda i, attr: i.get(attr, ''), attributes, i))) for i in items]
+        items = [filter(lambda x: x, reduce(lambda i, attr: i.get(attr, ''), attributes, i)) for i in items]
     if not len(items):
         return 'UNKNOWN'
     elif len(items) == 1:
