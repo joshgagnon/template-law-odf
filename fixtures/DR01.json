@@ -32,6 +32,8 @@
     "matter": {
         "matterId": "voluptas ut"
     },
+    "guarantor": {"recipientType": "individuals",
+        "contactMethod":{"method":"email","email":"asdf"}},
     "sender": "Tamina Cunningham-Adams",
     "valediction": "sincerely",
     "creditor": "et voluptas quia aliquam alias",

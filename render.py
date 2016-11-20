@@ -19,6 +19,16 @@ def join_and(items=[], *attributes):
     return '%s and %s' % (', '.join(items[:len(items) - 1]), items[-1])
 
 
+def join_and_multi(items=[], *attributes):
+    if attributes:
+        items = [' '.join(filter(lambda x: x, map(lambda attr: i.get(attr, ''), attributes))) for i in items]
+    if not len(items):
+        return 'UNKNOWN'
+    elif len(items) == 1:
+        return items[0] or 'UNKNOWN'
+    return '%s and %s' % (', '.join(items[:len(items) - 1]), items[-1])
+
+
 def week_day(date_string):
     try:
         return datetime.datetime.strptime(date_string, '%d %B %Y').strftime('%A')
@@ -60,6 +70,7 @@ def number_to_words(num):
     return inflect_engine.number_to_words(num or 0)
 
 engine.environment.filters['join_and'] = join_and
+engine.environment.filters['join_and_multi'] = join_and_multi
 engine.environment.filters['week_day'] = week_day
 engine.environment.filters['sum_debits_credits'] = sum_debits_credits
 engine.environment.filters['format_number'] = format_number
