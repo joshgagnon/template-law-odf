@@ -66,6 +66,10 @@ def timestamp_tz_to_string(input):
     return datetime.datetime.strptime(str(input), "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%d %B %Y")
 
 
+def timestamp_tz_to_time(input):
+    # TODO, include TZ info
+    return datetime.datetime.strptime(str(input), "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%I:%M %p")
+
 def number_to_words(num):
     return inflect_engine.number_to_words(num or 0)
 
@@ -78,7 +82,7 @@ engine.environment.filters['currency'] = currency
 engine.environment.filters['percentage'] = percentage
 engine.environment.filters['number_to_words'] = number_to_words
 engine.environment.filters['timestamp_tz_to_string'] = timestamp_tz_to_string
-
+engine.environment.filters['timestamp_tz_to_time'] = timestamp_tz_to_time
 
 def render_odt(form_name, values, subdir=None):
     form_path = [form_name + '.odt']
