@@ -12,6 +12,7 @@ from subprocess import Popen, STDOUT
 import shutil
 import errno
 from render import render_odt
+
 try:
     from subprocess import DEVNULL  # py3k
 except ImportError:
@@ -122,6 +123,26 @@ def render():
                          mimetype=MIMETYPES[file_type])
     except Exception as e:
         print(e)
+        raise InvalidUsage(e.message, status_code=500)
+
+
+@app.route('/convert', methods=['POST'])
+def convert():
+    try:
+        file_type = request.values.get('fileType', 'docx')
+        result = request.files['file']
+        filename = result.filename
+        if file_type != 'odt' and EXTENSIONS.get(file_type):
+            result = convert_type_service(result.read(), file_type)
+        else:
+            result = result.read()
+        print(os.path.splitext(filename)[0] + EXTENSIONS[file_type])
+        return send_file(BytesIO(result),
+                         attachment_filename=os.path.splitext(filename)[0] + EXTENSIONS[file_type],
+                         as_attachment=True,
+                         mimetype=MIMETYPES[file_type])
+    except Exception as e:
+
         raise InvalidUsage(e.message, status_code=500)
 
 
