@@ -2,6 +2,7 @@ from secretary import Renderer
 import datetime
 import inflect
 import os
+import pytz
 
 
 inflect_engine = inflect.engine()
@@ -63,12 +64,16 @@ def percentage(string):
 
 def timestamp_tz_to_string(input):
     # TODO, include TZ info
-    return datetime.datetime.strptime(str(input), "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%d %B %Y")
+    return timestamp_localise(input).strftime("%d %B %Y")
 
 
 def timestamp_tz_to_time(input):
     # TODO, include TZ info
-    return datetime.datetime.strptime(str(input), "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%I:%M %p")
+    # return datetime.datetime.strptime(str(input), "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%I:%M %p")
+    return timestamp_localise(input).strftime("%I:%M %p")
+
+def timestamp_localise(timestamp):
+    return pytz.utc.localize(datetime.datetime.strptime(str(timestamp), "%Y-%m-%dT%H:%M:%S.%fZ")).astimezone(pytz.timezone('NZ'))
 
 def number_to_words(num):
     return inflect_engine.number_to_words(num or 0)
