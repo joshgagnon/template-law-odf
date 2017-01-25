@@ -78,6 +78,7 @@ def convert_type_service(data, type):
             temp_in.write(data)
             temp_in.flush()
             args = [SOFFICE_PYTHON, CONVERTER, temp_in.name, temp_out.name]
+            print(' '.join(args))
             Popen(args,
                  stdout=DEVNULL,
                  stderr=STDOUT,
@@ -132,12 +133,10 @@ def convert():
         file_type = request.values.get('fileType', 'docx')
         result = request.files['file']
         filename = result.filename
+        file = result.read()
         if file_type != 'odt' and EXTENSIONS.get(file_type):
-            result = convert_type_service(result.read(), file_type)
-        else:
-            result = result.read()
-        print(os.path.splitext(filename)[0] + EXTENSIONS[file_type])
-        return send_file(BytesIO(result),
+            file = convert_type_service(file, file_type)
+        return send_file(BytesIO(file),
                          attachment_filename=os.path.splitext(filename)[0] + EXTENSIONS[file_type],
                          as_attachment=True,
                          mimetype=MIMETYPES[file_type])
