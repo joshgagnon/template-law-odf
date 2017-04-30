@@ -145,6 +145,11 @@ def convert():
         raise InvalidUsage(e.message, status_code=500)
 
 
+@app.route('/status', methods=['GET'])
+def status():
+    return 'Service is Online'
+
+
 @app.errorhandler(InvalidUsage)
 def handle_invalid_usage(error):
     response = jsonify(error.to_dict())
