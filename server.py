@@ -147,7 +147,7 @@ def convert():
 
 @app.route('/status', methods=['GET'])
 def status():
-    return 'Service is Online'
+    return 'Convert is Online'
 
 
 @app.errorhandler(InvalidUsage)
